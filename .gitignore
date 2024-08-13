@@ -1,0 +1,8 @@
+__pycache__/
+Figures/
+Data/Data_exe
+Repositorio/
+
+*.out
+*.x
+*.mod
