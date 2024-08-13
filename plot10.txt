@@ -1,0 +1,49 @@
+reset
+set term png size 5000,4500 font "Times,140"
+set output "Figure10.png"
+set multiplot layout 2,2
+set key noautotitle
+set xrange [0:6.28]
+set yrange [0:200]
+set palette defined ( 1 "#D81B60", 2 "blue", 3 "white") 
+########## 1:1
+set size 0.58,0.47
+set origin 0.0,0.5
+unset xtics
+unset xlabel
+set ytics 50 offset 0.5,-0.2 font "Times,140"
+set ylabel "{p} " offset 2.5,-0.20 rotate by 90 left font 'Times:Italic,160'
+unset colorbox
+plot "Basin1.dat" u 1:2:3 with points pt 7 ps 3 palette,\
+     "FixedPoints1.dat" u 1:2 with points ps 10 pt 5 lc "black",\
+     "FixedPoints1.dat" u 3:4 with points ps 10 pt 9 lc "black"
+########## 1:2
+set size 0.48,0.47
+set origin 0.53,0.5
+unset xtics 
+unset xlabel
+unset ytics 
+unset ylabel
+plot "Basin2.dat" u 1:2:3 with points pt 7 ps 3 palette ,\
+     "FixedPoints2.dat" u 1:2 with points ps 10 pt 5 lc "black",\
+     "FixedPoints2.dat" u 3:4 with points ps 10 pt 9 lc "black"
+########## 2:1
+set size 0.58,0.53
+set origin 0.0,0.0
+set xtics ("0" 0, "{/Times:Italic {/Symbol p}}" 3.14, "2 {/Times:Italic {/Symbol p}}" 6.28)  offset 0,0.1
+set xlabel "{x} " offset 0.4,0.5 font 'Times:Italic,160'
+set ylabel "{p} " offset 2.5,-0.20 rotate by 90 left font 'Times:Italic,160'
+set ytics 50 offset 0.5,-0.2 font "Times,140"
+plot "Basin3.dat" u 1:2:3 with points pt 7 ps 3 palette ,\
+     "FixedPoints3.dat" u 1:2 with points ps 10 pt 5 lc "black",\
+     "FixedPoints3.dat" u 3:4 with points ps 10 pt 9 lc "black"
+########## 2:2
+set size 0.5,0.53
+set origin 0.53, 0.0
+unset ytics 
+unset ylabel
+plot "Basin4.dat" u 1:2:3 with points pt 7 ps 3 palette ,\
+     "FixedPoints4.dat" u 1:2 with points ps 10 pt 5 lc "black",\
+     "FixedPoints4.dat" u 3:4 with points ps 10 pt 9 lc "black"
+
+unset multiplot

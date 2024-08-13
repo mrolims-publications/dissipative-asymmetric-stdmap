@@ -1,0 +1,59 @@
+ set term png size 4000,1000 font "Times,62"
+ set output "Figure9.png"
+ set multiplot layout 1,4
+ set style data points
+ unset key
+ set palette defined (1 "dark-red", 2 "blue")
+ unset colorbox
+set yrange[0:1]
+ ############## 1,1
+ set origin 0.0,0.0
+ set size 0.26,1.0
+ set xrange [21.299:21.5]
+ #set label "/" at 7.105, -0.03 center font "Symbol,70"
+ #set label "/" at 7.105, 0.97 center font "Symbol,70"
+ set xtics ("21.3" 21.3, "21.5" 21.5) offset 0,-0.3
+ set ytics 0.5
+ set border 7 lw 5
+ plot "BasinStability.dat" u 2:4 with linespoints pt 7 ps 3 lw 3 lc "dark-red",\
+      "BasinStability.dat" u 2:3 with linespoints pt 7 ps 3 lw 3 lc "blue"
+############## 1,2
+ set origin 0.26,0.0
+ set size 0.23,1.0
+ set xrange [56.06:56.261]
+ set xtics ("56.06" 56.06, "56.26" 56.261) offset 0,-0.3
+ unset ytics
+ #set label "/" at 56, -0.03 center font "Symbol,70"
+ #set label "/" at 56, 0.97 center font "Symbol,70"
+ # set label "/" at 56.4, -0.03 center font "Symbol,70"
+ #set label "/" at 56.4, 0.97 center font "Symbol,70"
+ set border 5 lw 5
+ plot "BasinStability.dat" u 2:4 with linespoints pt 7 ps 3 lw 3 lc "dark-red",\
+      "BasinStability.dat" u 2:3 with linespoints pt 7 ps 3 lw 3 lc "blue"
+ ############## 1,3
+ set origin 0.50,0.0
+ set size 0.23,1.0
+ set xrange [117.5199:117.72]
+ set xtics ("117.52" 117.52, "117.72" 117.72)
+ unset ytics
+ #set label "/" at 117.57, -0.03 center font "Symbol,70"
+ #set label "/" at 117.57, 0.97 center font "Symbol,70"
+ # set label "/" at 117.8, -0.03 center font "Symbol,70"
+ #set label "/" at 117.8, 0.97 center font "Symbol,70"
+ set border 5 lw 5
+ plot "BasinStability.dat" u 2:4 with linespoints pt 7 ps 3 lw 3 lc "dark-red",\
+      "BasinStability.dat" u 2:3 with linespoints pt 7 ps 3 lw 3 lc "blue"
+ ############## 1,3
+ set origin 0.75,0.0
+ set size 0.23,1.0
+ set xrange [185.36:185.661]
+ set xtics ("185.36" 185.36,  "185.66" 185.66)
+ unset ytics
+ #set label "/" at 185.4, -0.03 center font "Symbol,70"
+ #set label "/" at 185.4, 0.97 center font "Symbol,70"
+ set border 13 lw 5
+ plot "BasinStability.dat" u 2:4 with linespoints pt 7 ps 3 lw 3 lc "dark-red",\
+      "BasinStability.dat" u 2:3 with linespoints pt 7 ps 3 lw 3 lc "blue"
+ set xlabel "{k} " offset 0.50,0.2 font "Times:Italic,52"
+ set ylabel "{BS} " offset 1.1 rotate by 90 left font "Times:Italic,52"
+ quit

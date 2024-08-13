@@ -1,0 +1,32 @@
+ set term png size 3000,2500 font "Times,70"
+ set output "Figure7.png"
+ set multiplot layout 1,4
+ set key noautotitle
+ set style data points
+ set palette defined ( 1 "black", 2 "orange")
+ unset key
+ unset colorbox
+ set xrange [0:200]
+ set yrange [-400:200]
+ set ylabel "{p} " offset 1.5 rotate by 90 left font "Times:Italic,80"
+ set ytics 200
+ unset xtics
+########## Fig 7 (a)
+ set size 1.00,0.25
+ set origin 0.0,0.77
+ plot "Fig7a.dat" using 1:2:3 with points pt 7 ps 0.2 palette
+########## Fig 7 (b)
+ set size 1.00,0.25
+ set origin 0.0,0.54
+ plot "Fig7b.dat" using 1:2:3 with points pt 7 ps 0.2 palette
+########## Fig 7 (c)
+ set size 1.00,0.25
+ set origin 0.0,0.31
+ plot "Fig7c.dat" using 1:2:3 with points pt 7 ps 0.2 palette
+########## Fig 7 (d)
+ set size 1.00,0.33
+ set origin 0.0,-0.0
+ set xlabel "{k} " offset 0.50,0.2 font "Times:Italic,80"
+ set xtics 50
+ plot "Fig7d.dat" using 1:2:3 with points pt 7 ps 0.2 palette
+ quit

@@ -1,0 +1,17 @@
+reset
+set term png size 3000,2000 font "Times,80"
+set output "Figure8.png"
+set key noautotitle
+set size 1.0,1.0
+set origin 0.0,0.0
+set xlabel "{k} "  font 'Times:Italic,100'
+set ylabel "{R} " offset 3.5 rotate by 90 left font 'Times:Italic,100'
+set xrange [0.0:205]
+set yrange [0.0:0.3]
+set xtics 50 offset -0.5
+set ytics 0.1 offset 0.5
+plot "Ratio_g_0-80.dat" u 1:2 with linespoints pt 6 ps 6 lc "black" lw 4,"Ratio_g_0-80.dat" ps 5 lw 2 pt 7 lc "web-green",\
+     "Ratio_g_0-85.dat" u 1:2 with linespoints pt 6 ps 6 lc "black" lw 4,"Ratio_g_0-85.dat" ps 5 lw 2 pt 7 lc "gold",\
+     "Ratio_g_0-90.dat" u 1:2 with linespoints pt 6 ps 6 lc "black" lw 4,"Ratio_g_0-90.dat" ps 5 lw 2 pt 7 lc "web-blue"
+quit
+
