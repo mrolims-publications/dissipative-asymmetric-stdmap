@@ -50,5 +50,5 @@ To generate the data from Figure 10, run ``` gfortran Figure10.f90 ``` to compil
 
 ## Contact
 
-Matheus Rolim Sales: [matheusrolim95[at]gmail.com](mailto:matheusrolim95@gmail.com)
+Matheus Rolim Sales: [matheusrolim95[at]gmail.com](mailto:matheusrolim95@gmail.com)\
 Michele Mugnaine: [mmugnaine[at]gmail.com](mailto:mmugnaine95@gmail.com)
