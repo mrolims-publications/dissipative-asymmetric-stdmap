@@ -1,6 +1,6 @@
 # dissipative-asymmetric-stdmap
 
-Code repository accompanying the publication entitled "Shrinking shrimp-shaped domains and multistability in the dissipative asymmetric kicked rotor map".
+Code repository accompanying the publication entitled "[Shrinking shrimp-shaped domains and multistability in the dissipative asymmetric kicked rotor map](https://doi.org/10.1063/5.0233324)".
 
 This project contains the code to generate and plot the data from all figures. It has been developed by both [Michele Mugnaine](https://mmugnaine.github.io/) and [me](https://mrolims.github.io/).
 
@@ -47,6 +47,27 @@ To generate the data from Figure 9, run ``` gfortran Figure9.f90 ``` to compile 
 ## Figure 10
 
 To generate the data from Figure 10, run ``` gfortran Figure10.f90 ``` to compile the program and then run ``` ./a.out ``` to execute it. To plot the figure, run ``` gnuplot plot10.txt ```.
+
+## Citation
+
+If you use this repository or parts of it in your work, please consider citing our research paper:
+
+*M. Rolim Sales et al.*, **Shrinking shrimp-shaped domains and multistability in the dissipative asymmetric kicked rotor map**, *[Chaos 34, 113129 (2024)](https://doi.org/10.1063/5.0233324)*.
+
+```bibtex
+@article{RolimSales2024,
+author = {Rolim Sales, Matheus and Mugnaine, Michele and Leonel, Edson Denis and Caldas, Iberê L. and Szezech Jr., José D.},
+title = {Shrinking shrimp-shaped domains and multistability in the dissipative asymmetric kicked rotor map},
+journal = {Chaos: An Interdisciplinary Journal of Nonlinear Science},
+volume = {34},
+number = {11},
+pages = {113129},
+year = {2024},
+month = {11},
+doi = {10.1063/5.0233324},
+url = {https://doi.org/10.1063/5.0233324},
+}
+```
 
 ## Contact
 
